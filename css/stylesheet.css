@@ -1,0 +1,20 @@
+/* @charset "utf-8";*/
+
+/* 디자인할때 web font를 사용하면 해상도에 따른
+호환성이 좋음
+noto sans 라고 구글과 어도비가 합작해서 만든
+아시아권에 최적화된 폰트 */
+/* 우리가 사용할건 spoqa han sans */
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import url(./fontello.css);
+
+body{
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+}
+
+/* 스킵 네비게이션 */
+.skip-nav{
+  display: none;
+}
