@@ -10,11 +10,88 @@ noto sans 라고 구글과 어도비가 합작해서 만든
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
 
-body{
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 이렇게 쓰면 전체 선택이 되기때문에 성능적 저하가 일어날 수 있음
+그럴땐 body 후손 선택자로 *를 선택해준다. */
+
+html {
+  font-size: 10px;
+}
+
+body {
   font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-size: 1.4rem;
+  color: #181818;
+  /*검정색*/
+  background: #fff;
 }
 
 /* 스킵 네비게이션 */
-.skip-nav{
+.skip-nav {
   display: none;
+}
+
+/* 레이아웃 */
+
+.header,
+.visual,
+.main,
+.slogan {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  background: red;
+}
+
+.visual {
+  background: orange;
+  height: 120px;
+}
+
+.main {
+  background: green;
+  padding: 30px 15px;
+  overflow: hidden;
+  min-height: 450px;
+}
+
+.clearfix::after{
+  content:"";
+  clear: both;
+  display: block;
+}
+
+.group {
+  float: left;
+  margin: 0 15px;
+}
+
+.main .group1{
+  background: blanchedalmond;
+  width: 250px;
+}
+
+.main .group2{
+  width: 380px;
+  background: skyblue;
+}
+
+.main .group3{
+  width: 190px;
+  background: chocolate;
+}
+
+.slogan {
+  background: blue;
+}
+
+.footer {
+  background: rebeccapurple;
+  width: 100%;
 }
