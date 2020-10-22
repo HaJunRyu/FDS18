@@ -97,7 +97,6 @@ a {
 .member li a {
   padding: 6px 0;
   display: inline-block;
-  background: pink;
 }
 
 /* 네비게이션 */
@@ -154,7 +153,6 @@ a {
 .sub-menu a{
   padding: 8px 0;
   margin-right: 10px;
-  background-color: cornsilk;
 }
 
 .sub-menu a::before{
@@ -257,7 +255,6 @@ a {
 
 .visual {
   position: relative;
-  background: orange;
   height: 120px;
 }
 
@@ -294,8 +291,22 @@ a {
 }
 
 .main .group1 {
-  background: blanchedalmond;
   width: 250px;
+}
+
+.login {
+  background: orange;
+  border-radius: 5px;
+}
+
+.login h2{
+  margin: 0;
+  color: yellow;
+}
+
+.signup{
+  padding-top: 10px;
+  border-top: 1px solid gray;
 }
 
 .main .group2 {
