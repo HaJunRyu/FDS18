@@ -16,17 +16,17 @@ noto sans 라고 구글과 어도비가 합작해서 만든
   height: 1px;
   overflow: hidden;
   margin: 0;
-  /*h2의 margin을 존재*/
+  /*h2의 margin을 제거*/
   clip-path: polygon(0 0, 0 0, 0 0);
   /* opacity: 0; */
 }
+/* 스크린리더에서도 이슈없이 사용하려면 이 방법이 가장 이상적이다! */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 /* 이렇게 쓰면 전체 선택이 되기때문에 성능적 저하가 일어날 수 있음
 그럴땐 body 후손 선택자로 *를 선택해준다. */
 
@@ -103,7 +103,6 @@ a {
 /* 네비게이션 */
 .navigation {
   padding-bottom: 35px;
-  ;
 }
 
 .menu {
@@ -201,25 +200,42 @@ a {
 .menu-act .menu-button::after{
   content: "";
   display: block;
-  border-top: 2px solid #000;
 }
 
 .menu-act .menu-button {
   color: #ff0;
 }
 
-/* .menu-button:hover{
-  color : yellow;
-  border-bottom: 3px solid #181818;
-  cursor: pointer;
-} */
+/* 텍스트 및 배경 애니메이션 -비주얼 영역 */
+@keyframes textAni{
+  0%{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0);
+    transform: translate(0, 0);
+  }
 
-
-
+  100%{
+    font-size:24px;
+    color: rgba(0, 0, 0, 1);
+    transform: translate(400px, 75px);
+  }
+}
 
 .visual {
+  position: relative;
   background: orange;
   height: 120px;
+}
+
+.visual-text{
+  width: 500px;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation-name: textAni;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;/* 100%에서 유지하게끔 하는 속성 */
+  /* position: absolute; */
+  background-color: blueviolet;
 }
 
 .main {
