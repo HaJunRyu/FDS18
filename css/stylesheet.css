@@ -11,13 +11,16 @@ noto sans 라고 구글과 어도비가 합작해서 만든
 @import url(./fontello.css);
 
 /* 숨김 제목 및 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend{
+  position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   margin: 0;
   /*h2의 margin을 제거*/
   clip-path: polygon(0 0, 0 0, 0 0);
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   /* opacity: 0; */
 }
 /* 스크린리더에서도 이슈없이 사용하려면 이 방법이 가장 이상적이다! */
@@ -252,7 +255,6 @@ a {
 
 }
 
-
 .visual {
   position: relative;
   height: 120px;
@@ -269,7 +271,7 @@ a {
 }
 
 .main {
-  background: green;
+  background: #fff;
   /* display: flex; */
   /*단축속성! 원래 기본값인데 명시적 표현함*/
   /* flex-flow: row nowrap; */
@@ -297,16 +299,59 @@ a {
 .login {
   background: orange;
   border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: 5px 5px gray;
+  padding: 0 10px;
 }
 
 .login h2{
-  margin: 0;
   color: yellow;
+  font-size: 16px;
 }
 
-.signup{
-  padding-top: 10px;
+.login-form{
+  border: none;
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  position: relative;
+}
+
+.login-form fieldset{
+  border: none;
+}
+
+.login-form label{
+  display: inline-block;
+  width: 60px;
+}
+
+.user-pw{
+  margin-top: 5px;
+}
+
+.user-email input, .user-pw input{
+  width: 90px;
+}
+
+.btn-login{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 12px;
+}
+
+.login-member{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
   border-top: 1px solid gray;
+  padding: 10px 0;
 }
 
 .main .group2 {
