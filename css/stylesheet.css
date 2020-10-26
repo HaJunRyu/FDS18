@@ -505,6 +505,76 @@ a {
   float: right;
   background-color: lime;
 }
+/* 검색폼 */
+
+.search-form {
+  background: #ccc linear-gradient(#ccc, #eee); /*gradient호환 안되면 #ccc로 적용*/
+  border: 1px solid #aaa;
+  border-bottom-color: #ffffff;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+
+.search-form fieldset{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.search-form-container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between
+}
+
+.search-form input[name="search"]{
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 1px 1px 1px 0.5em;
+  height: 22px;
+  width: 190px;
+  /* margin: 0 5px; */
+}
+
+.search-form button{
+  background: #333;
+  color: #ffffff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 22px;
+  padding: 0 10px;
+}
+  
+/* 내가 한 코드 */
+/* .search-form{
+  border: 1px solid #aaa;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 0;
+  padding:20px 20px 10px 15px;
+  background: linear-gradient(#ccc, #eee);
+}
+
+.search-form fieldset{
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-form input[type="search"]{
+  width:200px;
+  height: 25px;
+}
+
+.search-form button{
+  width:50px;
+  height: 25px;
+  color: #ffffff;
+  background: #000;
+  border-radius: 2px;
+  border: 0;
+} */
 
 
 .main .group2 {
