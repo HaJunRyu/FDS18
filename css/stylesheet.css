@@ -504,6 +504,11 @@ a {
   float: right;
   background-color: lime;
 }
+
+.main .group2 {
+  width: 380px;
+}
+
 /* 검색폼 */
 
 .search-form {
@@ -575,10 +580,147 @@ a {
   border: 0;
 } */
 
-
-.main .group2 {
-  width: 380px;
+.board{
+  background-color: yellow;
+  position: relative;
+  height: 180px;
+  margin-top: 20px;
 }
+
+.tab {
+  float: left;
+  margin: 0;
+}
+
+.tab a {
+  display: block;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #aaa;
+  background: #ccc linear-gradient(#ccc, #eee);
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+
+.is-active .tab a{
+  background: #ffffff;
+  border-color: #ed702d #ed702d #fff #ed702d;
+  color: #ed702d;
+}
+
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+  display: none;
+}
+
+.is-active .notice-list,
+.is-active .pds-list,
+.is-active .notice-more,
+.is-active .pds-more {
+  display: block;
+}
+
+.notice-list, .pds-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  background: skyblue;
+  position: absolute;
+  left: 0;
+  top: 45px;
+  width: 100%;
+}
+
+.notice-list li,
+.pds-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 10px;
+  /* justify-content: space-between; */
+}
+
+.notice-list a,
+.pds-list a {
+  width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notice-more,
+.pds-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+  background: pink;
+}
+
+.notice-more::before,
+.pds-more::before {
+  color: hsla(110, 50%, 35%, 1);
+}
+
+/* 내가 쓴 코드 */
+/* .board .notice-heading {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.notice-heading a , .pds-heading a{
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  border-bottom-color: #ffffff;
+  padding: 5px;
+}
+
+.notice .notice-list, .pds .pds-list{
+  padding-left: 0;
+  margin: 20px 0;
+  list-style-type: none;
+}
+
+.notice-list li, .pds-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.notice-list li a, .pds-list li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board .pds-heading {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.icon-plus {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.pds .pds-list, .pds .pds-more{
+  display: none;
+}
+
+.is-active .notice-list,
+.is-active .psd-list,
+.is-active .notice-more,
+.is-active .pds-more {
+  display: block;
+} */
 
 .main .group3 {
   width: 190px;
