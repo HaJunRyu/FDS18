@@ -581,15 +581,26 @@ a {
 } */
 
 .board{
-  background-color: yellow;
   position: relative;
-  height: 180px;
   margin-top: 20px;
 }
 
 .tab {
-  float: left;
   margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+.is-active .tab {
+  z-index: 9999;
+}
+
+.notice-heading {
+  left: 0;
+}
+
+.pds-heading {
+  left: 83px;
 }
 
 .tab a {
@@ -600,7 +611,7 @@ a {
   color: #999;
   font-size: 1.4rem;
   font-weight: 400;
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
 
 .is-active .tab a{
@@ -624,14 +635,12 @@ a {
 }
 
 .notice-list, .pds-list {
+  min-height: 170px;
+  width: 100%;
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  background: skyblue;
-  position: absolute;
-  left: 0;
-  top: 45px;
-  width: 100%;
+  padding-top: 45px;
 }
 
 .notice-list li,
@@ -640,6 +649,13 @@ a {
   flex-flow: row nowrap;
   margin-bottom: 10px;
   /* justify-content: space-between; */
+}
+
+.notice-list::after,
+.pds-list::after{
+  content:"";
+  display: block;
+  position: static;
 }
 
 .notice-list a,
@@ -656,7 +672,6 @@ a {
   top: -8px;
   right: -8px;
   padding: 8px;
-  background: pink;
 }
 
 .notice-more::before,
