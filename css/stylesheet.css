@@ -367,7 +367,6 @@ a {
 
 .login-form label {
   display: inline-block;
-  background: #ff0;
   width: 4em;
   /*4글자의 폰트수만큼의 공간을 확보*/
 }
