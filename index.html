@@ -178,8 +178,8 @@
       <section class="validation">
         <h2 class="a11y-hidden">호환성 검사</h2>
         <ul class="validation-list">
-          <li class="markup"><a role="W3C Markup Validation" target="_blank" href="https://validator.w3.org/" title="마크업 유효성 검사 사이트로 이동">W3C Markup Validation</a></li>
-          <li class="css"><a role="CSS Validation Service" target="_blank" href="https://jigsaw.w3.org/css-validator/" title="CSS 유효성 검사 사이트로 이동">CSS Validation Service</a></li>
+          <li class="markup"><a target="_blank" href="https://validator.w3.org/" title="마크업 유효성 검사 사이트로 이동">W3C Markup Validation</a></li>
+          <li class="css"><a target="_blank" href="https://jigsaw.w3.org/css-validator/" title="CSS 유효성 검사 사이트로 이동">CSS Validation Service</a></li>
         </ul>
       </section>
       <section class="term">
@@ -250,7 +250,20 @@
         </section>
       </div>
       <section class="news">
-        <h2 class="news-heading">새소식</h2>
+        <h2 class="news-heading" id="newsHeading">새소식</h2>
+        <article class="news-article">
+          <a href="#" class="news-article-link">
+            <h3 class="news-article-subject">W3C 사이트가 리뉴얼 되었습니다.</h3>
+            <time class="news-article-date" datetime="2020-10-28T14:19:07">2020.10.28</time>
+            <p class="news-article-brief">디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를 위한 기술 가이드도 찾기 쉽도록 구성 되어 있습니다.</p>
+            <figure class="news-article-thumbnail">
+              <img src="./images/news.gif" alt="" aria-labelledby="newsArticleThumnail">
+              <figcaption id="newsArticleThumnail">W3C 리뉴얼</figcaption>
+            </figure>
+          </a>
+        </article>
+        <a href="#" class="icon-plus news-more"
+            title="새소식" aria-labelledby="newsHeading">더보기</a>
       </section>
     </div>
     <div class="group group3">group3</div>
