@@ -466,11 +466,11 @@ a {
   background-color: yellow;
 }
 
-.term-list>:first-child{
+.term-list>:first-child {
   margin-bottom: 20px;
 }
 
-.term-list > :first-child .term-list-subject {
+.term-list> :first-child .term-list-subject {
   background-color: pink;
   display: inline-block;
   margin: 0 0 10px 10px;
@@ -486,14 +486,14 @@ a {
   display: block;
 }
 
-.term-list > :first-child .term-list-brief {
+.term-list> :first-child .term-list-brief {
   display: block;
   padding-left: 70px;
   line-height: 1.5;
   background-color: orange;
 }
 
-.term-list > :last-child .term-list-subject {
+.term-list> :last-child .term-list-subject {
   background-color: pink;
   display: inline-block;
   margin: 0 0 10px 10px;
@@ -512,26 +512,27 @@ a {
 /* 검색폼 */
 
 .search-form {
-  background: #ccc linear-gradient(#ccc, #eee); /*gradient호환 안되면 #ccc로 적용*/
+  background: #ccc linear-gradient(#ccc, #eee);
+  /*gradient호환 안되면 #ccc로 적용*/
   border: 1px solid #aaa;
   border-bottom-color: #ffffff;
   border-radius: 15px 15px 0 0;
   padding: 15px 25px 10px;
 }
 
-.search-form fieldset{
+.search-form fieldset {
   border: 0;
   padding: 0;
   margin: 0;
 }
 
-.search-form-container{
+.search-form-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between
 }
 
-.search-form input[name="search"]{
+.search-form input[name="search"] {
   border: 1px solid #aaa;
   border-radius: 3px;
   padding: 1px 1px 1px 0.5em;
@@ -540,7 +541,7 @@ a {
   /* margin: 0 5px; */
 }
 
-.search-form button{
+.search-form button {
   background: #333;
   color: #ffffff;
   border: 1px solid #aaa;
@@ -548,7 +549,7 @@ a {
   height: 22px;
   padding: 0 10px;
 }
-  
+
 /* 내가 한 코드 */
 /* .search-form{
   border: 1px solid #aaa;
@@ -580,7 +581,7 @@ a {
   border: 0;
 } */
 
-.board{
+.board {
   position: relative;
   margin-top: 20px;
 }
@@ -614,7 +615,7 @@ a {
   padding: 5px 15px;
 }
 
-.is-active .tab a{
+.is-active .tab a {
   background: #ffffff;
   border-color: #ed702d #ed702d #fff #ed702d;
   color: #ed702d;
@@ -634,7 +635,8 @@ a {
   display: block;
 }
 
-.notice-list, .pds-list {
+.notice-list,
+.pds-list {
   min-height: 170px;
   width: 100%;
   list-style-type: none;
@@ -652,8 +654,8 @@ a {
 }
 
 .notice-list::after,
-.pds-list::after{
-  content:"";
+.pds-list::after {
+  content: "";
   display: block;
   position: static;
 }
@@ -769,15 +771,16 @@ a {
   grid-template-columns: 130px 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: 'thumbnail subject'
-                        'thumbnail date'
-                        'thumbnail brief';
+    'thumbnail date'
+    'thumbnail brief';
 }
 
-.news-article .news-article-subject{
+.news-article .news-article-subject {
   margin: 0 0 5px;
   grid-area: subject;
   font-size: 1.5rem;
 }
+
 .news-article-date {
   grid-area: date;
 }
@@ -809,13 +812,96 @@ a {
   right: 0;
 }
 
-.news-more::before{
+.news-more::before {
   color: hsla(110, 50%, 30%, 1);
 }
 
 .main .group3 {
   width: 190px;
 }
+
+/* 신규 이벤트 및 관련 사이트 */
+
+.gradient-box {
+  background: #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.event {
+  position: relative;
+}
+
+.event-heading,
+.related-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.point-color {
+  color: #ed702d
+}
+
+.event-thumbnail {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.event-brief em {
+  font-style: normal;
+}
+
+.btn-event {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn-prev,
+.btn-next {
+  border: 0;
+  padding: 18px 0 0 0;
+  width: 19px;
+  height: 18px;
+  overflow: hidden;
+  background: transparent url("./images/back_forward.png") 0 0 no-repeat;
+}
+
+.btn-next {
+  background-position: -36px 0;
+}
+
+/* 내가 짠 코드 */
+
+/* .btn-event {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn-event button {
+  width: 19px;
+  height: 18px;
+  overflow: hidden;
+  border: 0;
+  color: transparent;
+}
+
+.btn-event .btn-prev {
+  background: url("./images/back_forward.png") no-repeat;
+  background-size: cover;
+}
+
+.btn-event .btn-next {
+  background: url("./images/back_forward.png") no-repeat  -37px 0;
+  background-size: cover;
+} */
 
 .slogan {
   background: blue;
