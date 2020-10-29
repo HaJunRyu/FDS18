@@ -831,6 +831,7 @@ a {
 
 .event {
   position: relative;
+  border-bottom: 1px solid #aaa;
 }
 
 .event-heading,
@@ -876,6 +877,40 @@ a {
 .btn-next {
   background-position: -36px 0;
 }
+
+.related {
+  padding-top : 10px;
+}
+
+.related-list {
+  height: 27px;
+  overflow: hidden;
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0 0;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 0;
+  transition-duration: .5s;
+}
+
+.related-list:hover {
+  height: 147px;
+  padding: 10px 0;
+}
+
+.related li {
+  padding: 2px 5px 3px 5px;
+}
+
+.related-list a {
+  display: block;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+
 
 /* 내가 짠 코드 */
 
