@@ -895,6 +895,9 @@ a {
   transition-duration: .5s;
 }
 
+
+/* 포커스를 주지 않는 이유는 사용자경험상 포커스 했을때
+메뉴바가 펼쳐지지 않아도 a태그로 인해 각각의 항목을 선택할 수 있다. */
 .related-list:hover {
   height: 147px;
   padding: 10px 0;
@@ -938,6 +941,109 @@ a {
   background-size: cover;
 } */
 
+/* 인기사이트 */
+
+.favorite {
+  margin-top: 20px;
+  position: relative;
+}
+
+.favorite-heading {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.favorite-more::before {
+  color: hsla(110, 50%, 30%, 1);
+}
+
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
+
+.favorite-list {
+  margin: 10px 0 0 0;
+  padding-left: 0pc;
+  list-style: none;
+  
+}
+
+.favorite-list li {
+  margin-top: 8px;
+  counter-increment: num;
+  position: relative;
+  /* display: flex;
+  flex-flow: row wrap;
+  align-items: center; */
+}
+
+/* counter를 이용하지 않은 방법 */
+/* .favorite-list li:first-child::before {
+  content: "1 ";
+}
+.favorite-list li:nth-child(2):before {
+  content: "2 ";
+}
+.favorite-list li:nth-child(3)::before {
+  content: "3 ";
+}
+.favorite-list li:last-child::before {
+  content: "4 ";
+} */
+
+.favorite-list li::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  content: counter(num);
+  display: inline-block;
+  color: #fff;
+  background: #999;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 2px 5px;
+  margin-right: 5px;
+}
+
+.favorite-list a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 10px 0 25px;
+  /* margin-right: 5px;
+  flex-grow: 1; */
+}
+
+.favorite-list .up,
+.favorite-list .down,
+.favorite-list .stop{
+  font-style: normal;
+  width: 9px;
+  height: 0;
+  padding-top: 11px;
+  overflow: hidden;
+  background: url(./images/rank.png) no-repeat 0% 0%;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+}
+
+
+.favorite-list .down{
+  background-position: 0 100%;
+}
+
+.favorite-list .stop {
+  background-position: 0 50%;
+}
 .slogan {
   background: blue;
 }
